@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	<record model="ir.ui.view" id="purchase_recommendation_form_view">
+	    <field name="name">purchase.order.form.inherit</field>
+	    <field name="model">purchase.order</field>
+	    <field name="inherit_id" ref="purchase.purchase_order_form"/>
+	    <field name="arch" type="xml">
+	        <data>
+                        <button name="wkf_send_rfq" position="before">
+                                <button name="lote_recommendations" states="draft" string="Recommendations" 
+					type="object" class="oe_highlight" />
+                        </button>
+                        <notebook>
+                                <page string="Recommendations">
+                                   <field name="recommendation_ids">
+                                        <tree>
+                                                <field name="product_id" />
+                                                <field name="product_new" />
+                                        </tree>
+                                   </field>
+                                </page>
+                        </notebook>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</openerp>
