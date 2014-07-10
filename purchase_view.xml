@@ -18,6 +18,7 @@
                                         <tree>
                                                 <field name="product_id" />
                                                 <field name="product_new" />
+                                                <field name="isbn" />
                                         </tree>
                                    </field>
                                 </page>

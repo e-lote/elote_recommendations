@@ -58,6 +58,7 @@ class purchase_order_recomendations(osv.osv):
 		'order_id': fields.many2one('purchase.order','Pedido'),
 		'product_id': fields.many2one('product.product','Producto'),
 		'product_new': fields.related('product_id','producto_nuevo',type='boolean',string='Producto Nuevo'),
+		'isbn': fields.related('product_id','ean13',type='char',string='ISBN'),
 		}
 
 purchase_order_recomendations()
