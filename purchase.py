@@ -40,11 +40,12 @@ class purchase_order(osv.osv):
 		purchase_obj = self.browse(cr,uid,ids)
 		if purchase_obj[0].partner_id.id and purchase_obj[0].lote_id.id:
 			for product in purchase_obj[0].lote_id.product_ids:
-				vals_recommendation = {
-					'order_id': purchase_obj[0].id,
-					'product_id': product.id,
-					}
-				return_id = self.pool.get('purchase.order.recommendation').create(cr,uid,vals_recommendation)
+				if product.producto_nuevo:
+					vals_recommendation = {
+						'order_id': purchase_obj[0].id,
+						'product_id': product.id,
+						}
+					return_id = self.pool.get('purchase.order.recommendation').create(cr,uid,vals_recommendation)
 		return None
 
 

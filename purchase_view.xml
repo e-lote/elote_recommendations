@@ -14,6 +14,7 @@
                         </button>
                         <notebook>
                                 <page string="Recommendations">
+                                   <!-- field name="recommendation_ids" domain="[('product_new', '=', True)]" -->
                                    <field name="recommendation_ids">
                                         <tree>
                                                 <field name="product_id" />
