@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'eLote Recommendations',
-    'version': '0.1',
+    'version': '0.1.1',
     'category': 'E-Lote',
     'description': "",
     'author': 'Moldeo Interactive',
