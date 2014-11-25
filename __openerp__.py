@@ -29,7 +29,10 @@
     'depends': ['purchase'],
     'demo': [],
     # 'data': ['po_view.xml','purchase_view.xml'],
-    'data': ['purchase_view.xml','po_deffective_view.xml'],
+    'data': [
+             'purchase_view.xml',
+             'po_deffective_view.xml',
+             'security/ir.model.access.csv'],
     'test': [],
     'installable': True,
 }
